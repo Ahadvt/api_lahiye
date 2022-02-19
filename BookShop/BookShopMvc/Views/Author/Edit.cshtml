@@ -1,0 +1,31 @@
+﻿@model AuthorEditDtos
+@{
+    ViewData["Title"] = "Edit";
+}
+
+
+<div class="container">
+    <div class="card-body row">
+        <h1 style="text-align:center; margin-bottom:20px;">Author Create</h1>
+        <form method="post" class="forms-sample" enctype="multipart/form-data">
+            <div class="alert alert-danger" asp-validation-summary="ModelOnly"></div>
+            <div style="width:40%; margin-bottom:40px; padding-left:70px; ">
+                <label style="margin-bottom:10px;  font-size:20px;" font-size:20px;" asp-for="@Model.ImageFile">Author image</label>
+                <input asp-for="@Model.ImageFile" accept="image/*" class="form-control">
+                <span class="mt-2 text text-danger" asp-validation-for="@Model.ImageFile"></span>
+            </div>
+            <div class="d-flex justify-content-evenly">
+                <div style="width:40%;">
+                    <label style="margin-bottom:10px; font-size:20px;" asp-for="@Model.FullName">FullName </label>
+                    <input class="form-control" asp-for="@Model.FullName" type="text" id="editor1">
+                    <span class="mt-2 text text-danger" asp-validation-for="@Model.FullName"></span>
+                </div>
+            </div>
+            <div class="col-md-12 mt-3">
+                <a class="btn btn-dark" asp-controller="slider" asp-action="index"><i class="fas fa-undo"></i> Back</a>
+                <button type="submit" class="btn btn-primary">Save Changes</button>
+            </div>
+        </form>
+    </div>
+</div>
+

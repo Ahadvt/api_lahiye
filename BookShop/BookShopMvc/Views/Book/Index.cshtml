@@ -1,0 +1,36 @@
+﻿@model ListDtos<BookGetDtos>
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Title</th>
+                <th scope="col">SalePrice</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var book in Model.Items)
+            {
+                <tr>
+                    <th scope="row">@book.Id</th>
+                    <td>@book.Name</td>
+                    <td>@book.Title</td>
+                    <td>@book.SalePrice</td>
+                   
+                    <td><a asp-controller="book" asp-action="edit" asp-route-id="@book.Id">Edit</a></td>
+                    <td><a asp-controller="book" asp-action="delete" asp-route-id="@book.Id">Delete</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <div style="width:100%" class="btn bnt-otline-success">
+        <a asp-action="create" asp-controller="book">Create</a><div>
+        </div>
+    </div>
+</div>

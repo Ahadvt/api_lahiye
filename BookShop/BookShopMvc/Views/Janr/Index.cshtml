@@ -1,0 +1,40 @@
+﻿@model ListDtos<JanrGetDtos>
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col"></th>
+
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var janr in Model.Items)
+            {
+                <tr>
+                    <th scope="row">@janr.Id</th>
+                    <td>@janr.Name</td>
+                    <td><a asp-controller="janr" asp-action="edit" asp-route-id="@janr.Id">Edit</a></td>
+                    <td><a asp-controller="janr" asp-action="delete" asp-route-id="@janr.Id">Delete</a></td>
+
+
+                </tr>
+            }
+
+
+        </tbody>
+    </table>
+    <div style="width:100%" class="btn bnt-otline-success">
+        <a asp-action="create" asp-controller="janr">Create</a><div>
+    </div>
+
+</div>
+    </div>
+

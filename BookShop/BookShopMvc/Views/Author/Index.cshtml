@@ -1,0 +1,31 @@
+﻿@model ListDtos<AuthorGetDtos>
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var author in Model.Items)
+            {
+                <tr>
+                    <th scope="row">@author.Id</th>
+                    <td>@author.FullName</td>
+                    <td><a asp-controller="author" asp-action="edit" asp-route-id="@author.Id">Edit</a></td>
+                    <td><a asp-controller="author" asp-action="delete" asp-route-id="@author.Id">Delete</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <div style="width:100%" class="btn bnt-otline-success">
+        <a asp-action="create" asp-controller="author">Create</a><div>
+        </div>
+    </div>
+</div>
