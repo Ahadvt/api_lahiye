@@ -71,3 +71,4 @@ C:\Users\HP\Desktop\Api.Lahiye\BookShop\BookShop\bin\Debug\netcoreapp3.1\Microso
 C:\Users\HP\Desktop\Api.Lahiye\BookShop\BookShop\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\Users\HP\Desktop\Api.Lahiye\BookShop\BookShop\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
 C:\Users\HP\Desktop\Api.Lahiye\BookShop\BookShop\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\HP\Desktop\Api.Lahiye\BookShop\BookShop\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
